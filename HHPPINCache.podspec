@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'HHPPINCache'
-  s.version       = '3.0.4'
+  s.version       = '3.0.5'
   s.homepage      = 'https://github.com/acushway/PINCache'
   s.summary       = 'Fast, thread safe, parallel object cache for iOS and OS X.'
   s.authors       = { 'Garrett Moon' => 'garrett@pinterest.com', 'Justin Ouellette' => 'jstn@tumblr.com' }
@@ -15,6 +15,11 @@ Pod::Spec.new do |s|
 #ifndef TARGET_OS_WATCH
   #define TARGET_OS_WATCH 0
 #endif
+
+  s.resource_bundles = {
+    'HHPPINCache' => ['Resources/*.xcprivacy']
+  }
+
 EOS
   s.prefix_header_contents = pch_PIN
   s.subspec 'Core' do |sp|
